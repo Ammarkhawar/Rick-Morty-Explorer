@@ -574,7 +574,7 @@
                                 </form>
 
                             </el-dialog-panel>
-                            
+
                         </div>
                     </dialog>
                 </el-dialog>
@@ -772,490 +772,158 @@
                         </div>
                     </div>
 
-                    <section aria-labelledby="products-heading" class="pt-6 pb-24">
-                        <h2 id="products-heading" class="sr-only">Products</h2>
-                        <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-                            <!-- Product grid -->
-                            <div class="lg:col-span-3">
-                                <!-- Your content -->
+                    <!-- Content goes here -->
+                    <section aria-labelledby="products-heading" class="pt-6 pb-6">
+                        <!-- Character Cards -->
+                        <div class="character-container flex flex-wrap -m-2">
+
+                            <!-- Card 1 -->
+                            <div class="character-card p-2 lg:w-1/3 md:w-1/2 w-full">
+                                <div class="h-full flex border-gray-200 border p-4 rounded-lg">
+                                    <!-- Image -->
+                                    <img alt="team"
+                                        class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
+                                        src="https://rickandmortyapi.com/api/character/avatar/120.jpeg">
+                                    <!-- Text Content -->
+                                    <div class="flex-grow gap-2 flex flex-col">
+                                        <!-- Name -->
+                                        <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                                        <!-- Status and Species -->
+                                        <div class="flex gap-2 items-center">
+                                            <!-- Status -->
+                                            <div class="flex gap-1 items-center">
+                                                <p class="text-sm">Status:</p>
+                                                <span
+                                                    class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
+                                            </div>
+                                            <!-- Species -->
+                                            <div class="flex gap-1 items-center">
+                                                <p class="text-sm">Species:</p>
+                                                <span
+                                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
+                                                    Name</span>
+                                            </div>
+                                        </div>
+                                        <!-- Origin -->
+                                        <div class="flex gap-1 items-center">
+                                            <p class="text-sm">Origin::</p>
+                                            <span
+                                                class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
+                                                (C-137)</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Card 2 -->
+                            <div class="character-card p-2 lg:w-1/3 md:w-1/2 w-full">
+                                <div class="h-full flex border-gray-200 border p-4 rounded-lg">
+                                    <!-- Image -->
+                                    <img alt="team"
+                                        class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
+                                        src="https://dummyimage.com/80x80">
+                                    <!-- Text Content -->
+                                    <div class="flex-grow gap-2 flex flex-col">
+                                        <!-- Name -->
+                                        <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                                        <!-- Status and Species -->
+                                        <div class="flex gap-2 items-center">
+                                            <!-- Status -->
+                                            <div class="flex gap-1 items-center">
+                                                <p class="text-sm">Status:</p>
+                                                <span
+                                                    class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
+                                            </div>
+                                            <!-- Species -->
+                                            <div class="flex gap-1 items-center">
+                                                <p class="text-sm">Species:</p>
+                                                <span
+                                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
+                                                    Name</span>
+                                            </div>
+                                        </div>
+                                        <!-- Origin -->
+                                        <div class="flex gap-1 items-center">
+                                            <p class="text-sm">Origin::</p>
+                                            <span
+                                                class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
+                                                (C-137)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </section>
+
+                    
+
                 </main>
-            </div>
-
-            <!-- Search Bar -->
-            <!-- <div class="flex rounded-full border-2 border-blue-500 overflow-hidden max-w-md mb-20">
-                <input type="email" placeholder="Search Something..."
-                    class="w-full outline-none bg-white text-sm px-5 py-3" />
-                <button type='button' class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 px-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="18px"
-                        class="fill-white">
-                        <path
-                            d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z">
-                        </path>
-                    </svg>
-                </button>
-            </div> -->
-
-            <div class="flex flex-wrap -m-2">
-                <!-- Card 1 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 9 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 10 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 11 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 12 -->
-                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                    <div class="h-full flex border-gray-200 border p-4 rounded-lg">
-                        <!-- Image -->
-                        <img alt="team"
-                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-3"
-                            src="https://dummyimage.com/80x80">
-                        <!-- Text Content -->
-                        <div class="flex-grow gap-2 flex flex-col">
-                            <!-- Name -->
-                            <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                            <!-- Status and Species -->
-                            <div class="flex gap-2 items-center">
-                                <!-- Status -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Status:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Alive</span>
-                                </div>
-                                <!-- Species -->
-                                <div class="flex gap-1 items-center">
-                                    <p class="text-sm">Species:</p>
-                                    <span
-                                        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Specie
-                                        Name</span>
-                                </div>
-                            </div>
-                            <!-- Origin -->
-                            <div class="flex gap-1 items-center">
-                                <p class="text-sm">Origin::</p>
-                                <span
-                                    class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:inset-ring-blue-400/30">Earth
-                                    (C-137)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
+
+            <!-- Pagination here -->
+            <div class="flex items-center justify-between border-t border-white/10 px-4 pb-14 sm:px-6">
+                <div class="flex flex-1 justify-between sm:hidden">
+                    <a href="#"
+                        class="relative inline-flex items-center rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-white/10">Previous</a>
+                    <a href="#"
+                        class="relative ml-3 inline-flex items-center rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-white/10">Next</a>
+                </div>
+                <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                    <div>
+                        <p class="text-sm text-gray-300">
+                            Showing
+                            <span class="font-medium">1</span>
+                            to
+                            <span class="font-medium">10</span>
+                            of
+                            <span class="font-medium">97</span>
+                            results
+                        </p>
+                    </div>
+                    <div>
+                        <nav aria-label="Pagination" class="isolate inline-flex -space-x-px rounded-md">
+                            <a href="#"
+                                class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0">
+                                <span class="sr-only">Previous</span>
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                    class="size-5">
+                                    <path
+                                        d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <!-- Current: "z-10 text-white focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 focus-visible:outline-indigo-500", Default: "inset-ring focus:outline-offset-0 text-gray-200 inset-ring-gray-700 hover:bg-white/5" -->
+                            <a href="#" aria-current="page"
+                                class="relative z-10 inline-flex items-center bg-indigo-500 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">1</a>
+                            <a href="#"
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-200 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0">2</a>
+                            <a href="#"
+                                class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-200 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+                            <span
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-400 inset-ring inset-ring-gray-700 focus:outline-offset-0">...</span>
+                            <a href="#"
+                                class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-200 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+                            <a href="#"
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-200 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0">9</a>
+                            <a href="#"
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-200 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0">10</a>
+                            <a href="#"
+                                class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0">
+                                <span class="sr-only">Next</span>
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                    class="size-5">
+                                    <path
+                                        d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
