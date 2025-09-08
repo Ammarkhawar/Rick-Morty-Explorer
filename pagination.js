@@ -18,6 +18,9 @@ class Paginator {
     this._els = {
       prev: document.querySelector(selectors.prev),
       next: document.querySelector(selectors.next),
+      // Mobile prev/next (optional — present only on small screens)
+      prevMobile: document.querySelector(selectors.prevMobile),
+      nextMobile: document.querySelector(selectors.nextMobile),
       numbers: document.querySelector(selectors.numbers),
       pageStart: document.querySelector(selectors.pageStart),
       pageEnd: document.querySelector(selectors.pageEnd),
@@ -32,11 +35,28 @@ class Paginator {
   _bind() {
     if (this._els.prev) {
       this._els.prev.addEventListener('click', (e) => {
+        // prevent default navigation for anchors like href="#"
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
         if (this.currentPage > 1) this.onPageChange(this.currentPage - 1);
       });
     }
     if (this._els.next) {
       this._els.next.addEventListener('click', (e) => {
+        // prevent default navigation for anchors like href="#"
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        if (this.currentPage < this.totalPages) this.onPageChange(this.currentPage + 1);
+      });
+    }
+    // Bind mobile buttons if present
+    if (this._els.prevMobile) {
+      this._els.prevMobile.addEventListener('click', (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        if (this.currentPage > 1) this.onPageChange(this.currentPage - 1);
+      });
+    }
+    if (this._els.nextMobile) {
+      this._els.nextMobile.addEventListener('click', (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
         if (this.currentPage < this.totalPages) this.onPageChange(this.currentPage + 1);
       });
     }
@@ -149,16 +169,24 @@ class Paginator {
       numbersEl.appendChild(this._makePageButton(p, isCurrent, hiddenOnMobile));
     });
 
-    // Prev/Next enable/disable
+    // Prev/Next enable/disable (desktop + mobile)
+    const isFirst = this.currentPage === 1;
+    const isLast = this.currentPage === this.totalPages;
     if (this._els.prev) {
-      const disabled = this.currentPage === 1;  // Makes a Boolean variable (true or false).
-      this._els.prev.classList.toggle('opacity-50', disabled);
-      this._els.prev.classList.toggle('pointer-events-none', disabled);
+      this._els.prev.classList.toggle('opacity-50', isFirst);
+      this._els.prev.classList.toggle('pointer-events-none', isFirst);
     }
     if (this._els.next) {
-      const disabled = this.currentPage === this.totalPages; // Makes a Boolean variable (true or false).
-      this._els.next.classList.toggle('opacity-50', disabled);
-      this._els.next.classList.toggle('pointer-events-none', disabled);
+      this._els.next.classList.toggle('opacity-50', isLast);
+      this._els.next.classList.toggle('pointer-events-none', isLast);
+    }
+    if (this._els.prevMobile) {
+      this._els.prevMobile.classList.toggle('opacity-50', isFirst);
+      this._els.prevMobile.classList.toggle('pointer-events-none', isFirst);
+    }
+    if (this._els.nextMobile) {
+      this._els.nextMobile.classList.toggle('opacity-50', isLast);
+      this._els.nextMobile.classList.toggle('pointer-events-none', isLast);
     }
   }
 }
@@ -167,4 +195,3 @@ class Paginator {
 // window is the global object in the browser.
 // 👉 “Hey browser, make this class available everywhere in my scripts under the name Paginator.”
 window.Paginator = Paginator;
-

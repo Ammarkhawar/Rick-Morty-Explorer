@@ -66,6 +66,9 @@ const paginator = new Paginator({
   selectors: {
     prev: '#prev-page',
     next: '#next-page',
+    // Mobile prev/next hooks
+    prevMobile: '#prev-page-mobile',
+    nextMobile: '#next-page-mobile',
     numbers: '#pagination-numbers',
     pageStart: '#page-start',
     pageEnd: '#page-end',
