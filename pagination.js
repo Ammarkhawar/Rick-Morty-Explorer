@@ -8,12 +8,13 @@
 
 class Paginator {
   constructor({ perPage = 20, selectors = {}, onPageChange }) {
-    this.currentPage = 1;
-    this.perPage = perPage;
-    this.totalPages = 1;
-    this.totalCount = 0;
-    this.onPageChange = typeof onPageChange === 'function' ? onPageChange : () => {};
+    this.currentPage = 1;     // start on page 1 by default (to be set later)
+    this.perPage = perPage;   // store items‑per‑page setting
+    this.totalPages = 1;      // default total pages to 1 (to be set later)
+    this.totalCount = 0;      // default total count to 0 (to be set later)
+    this.onPageChange = typeof onPageChange === 'function' ? onPageChange : () => {};   //ensure onPageChange is a function, otherwise use a no‑op
 
+    // an object holding DOM element references
     this._els = {
       prev: document.querySelector(selectors.prev),
       next: document.querySelector(selectors.next),
@@ -23,19 +24,19 @@ class Paginator {
       totalResults: document.querySelector(selectors.totalResults),
     };
 
+    // set up event listeners for prev/next buttons
     this._bind();
   }
 
+  // Event listeners for prev/next buttons
   _bind() {
     if (this._els.prev) {
       this._els.prev.addEventListener('click', (e) => {
-        e.preventDefault();
         if (this.currentPage > 1) this.onPageChange(this.currentPage - 1);
       });
     }
     if (this._els.next) {
       this._els.next.addEventListener('click', (e) => {
-        e.preventDefault();
         if (this.currentPage < this.totalPages) this.onPageChange(this.currentPage + 1);
       });
     }
@@ -43,12 +44,13 @@ class Paginator {
 
   apply(page, totalCount, totalPages) {
     this.currentPage = page;
-    this.totalCount = totalCount ?? 0;
-    this.totalPages = totalPages ?? 1;
-    this._renderCounts();
-    this._renderNumbers();
+    this.totalCount = totalCount;
+    this.totalPages = totalPages;
+    this._renderCounts();     // Updates the counts display (e.g. "1-20 of 137")
+    this._renderNumbers();    // updates page buttons
   }
 
+  // Updates the counts display (e.g. "1-20 of 137")
   _renderCounts() {
     const start = this.totalCount === 0 ? 0 : (this.currentPage - 1) * this.perPage + 1;
     const end = Math.min(this.currentPage * this.perPage, this.totalCount);

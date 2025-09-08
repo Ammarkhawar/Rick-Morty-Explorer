@@ -6,7 +6,7 @@ const els = {
 };
 
 // Fetch 20 characters per page (API default)
-async function fetchCharacters(page = 1) {
+async function fetchCharacters(page) {
   const url = `https://rickandmortyapi.com/api/character?page=${page}`;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Request failed: ${response.status}`);
@@ -71,14 +71,16 @@ const paginator = new Paginator({
     pageEnd: '#page-end',
     totalResults: '#total-results',
   },
+  // The Callback function when a page is changed
   onPageChange: (page) => loadPage(page),
 });
 
-async function loadPage(page = 1) {
+// Load a specific page of characters and update the paginator
+async function loadPage(page) {
   try {
     const data = await fetchCharacters(page);
     renderCharacters(data.results ?? []);
-    paginator.apply(page, data.info?.count ?? 0, data.info?.pages ?? 1);
+    paginator.apply(page, data.info?.count, data.info?.pages);
   } catch (err) {
     console.error(err);
   }
