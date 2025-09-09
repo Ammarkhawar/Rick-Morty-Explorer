@@ -6,16 +6,15 @@ const els = {
 };
 
 // Fetch 20 characters per page (API default)
-async function fetchCharacters(page) {
-  const url = `https://rickandmortyapi.com/api/character?page=${page}`;
-  const response = await fetch(url);
+async function fetchCharacters(URL) {
+  const response = await fetch(URL);
   if (!response.ok) throw new Error(`Request failed: ${response.status}`);
   const data = await response.json();
   return data; // { info, results }
 }
 
 // Render character cards into the grid
-function renderCharacters(characters) {
+async function renderCharacters(characters) {
   const container = els.container();
   container.innerHTML = '';
 
@@ -81,8 +80,17 @@ const paginator = new Paginator({
 // Load a specific page of characters and update the paginator
 async function loadPage(page) {
   try {
-    const data = await fetchCharacters(page);
+    const { name, gender, status, specie } = readFilters();
+    console.log("Final Values ->",
+      { name, gender, status, specie, page });
+
+    const url = buildURL({ name, gender, status, specie, page });
+    console.log("Built URL:", url);
+
+    const data = await fetchCharacters(url);
+
     renderCharacters(data.results ?? []);
+
     paginator.apply(page, data.info?.count, data.info?.pages);
   } catch (err) {
     console.error(err);
@@ -91,3 +99,6 @@ async function loadPage(page) {
 
 // Initial load
 loadPage(1);
+
+// expose globally
+window.loadPage = loadPage;

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="src/output.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <script src="pagination.js" defer></script>
+    <script src="buildURL.js" defer></script>
+    <script src="filter.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -586,9 +588,9 @@
                         <!-- Search Bar -->
                         <div
                             class="flex rounded-full border-2 border-blue-500 overflow-hidden w-[-webkit-fill-available]">
-                            <input type="email" placeholder="Search Something..."
+                            <input type="email" name="search-input" placeholder="Search Something..."
                                 class="w-full outline-none bg-white text-sm px-5 py-3" />
-                            <button type='button'
+                            <button type='button' name="search-button"
                                 class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 px-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="18px"
                                     class="fill-white">
